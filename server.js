@@ -1,6 +1,9 @@
 import express from "express";
 import userRoutes from "./src/routes/userRoutes.js";
 import pool from "./src/config/db.js";
+import dotenv from "dotenv";
+dotenv.config();
+
 pool
   .query("SELECT NOW()")
   .then((result) => {
